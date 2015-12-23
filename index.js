@@ -18,7 +18,7 @@ module.exports = function(env, callback) {
   }
 
   // Load the filters
-  if(env.config.nunjucks && env.config.nunjucks.filterdir) {
+  if(env.config.nunjucks && env.config.nunjucks.filters_dir) {
     env.config.nunjucks.filters.map( function (name) {
       file = path.join(env.config.nunjucks.filters_dir, name + ".js");
       filter = env.loadModule(env.resolvePath(file), true);
