@@ -1,17 +1,35 @@
 {
   "name": "wintersmith-nunjucks",
-  "version": "1.0.1",
-  "author": "Jon Buckley <jon@jbuckley.ca>",
+  "preferGlobal": "true",
+  "version": "0.5.1",
+  "author": {
+    "name": "Jon Buckley",
+    "email": "jon@jbuckley.ca"
+  },
   "description": "Nunjucks templates for Wintersmith",
   "main": "index.js",
-  "repository": "https://github.com/jbuck/wintersmith-nunjucks.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbuck/wintersmith-nunjucks.git"
+  },
   "keywords": [
     "wintersmith",
     "wintersmith-plugin",
     "nunjucks"
   ],
-  "license": "BSD-2-Clause",
+  "license": "BSD",
   "dependencies": {
-    "nunjucks": "^2.1.0"
-  }
+    "nunjucks": "^1.1.0"
+  },
+  "gitHead": "c3cc698e0911f9bfab966dfe12c059cf5afe040a",
+  "readme": "wintersmith-nunjucks\n====================\n\n[nunjucks](http://nunjucks.jlongster.com/) plugin for\n[wintersmith](http://jnordberg.github.com/wintersmith/)\n\nHow to use\n----------\n\n1. Install globally using npm: `npm install -g wintersmith-nunjucks`\n2. Add to your wintersmith config.json: `\"plugins\": [\"wintersmith-nunjucks\"]`\n3. Create nunjucks templates ending in `.html`\n\n\nHow to add custom filters\n---------------------------\n\nFrom the nunjucks documentation at http://jlongster.github.io/nunjucks/templating.html#filters:\n\n>Filters are essentially functions that can be applied to variables. They are called with a pipe operator (|) and can take arguments.\n\nFor more information on how to write customer Filters, take a look at the API documentation page at: http://jlongster.github.io/nunjucks/api#custom-filters\n\nTo use customer filters with wintersmith, put the filter in its own file stored in a filters directory. The filename has to be the name of the filter + '.js'.\n\nso if your filter is in './filters/myfirstfilter.js' add a  nunjucks section like this to your config.json:\n\n```javascript\n\"nunjucks\": {  \n    \"filterdir\": \"filters\",\n    \"filters\": [\"myfirstfilter\"]\n}\n```\n\nIt will be available in your templates at 'myfirstfilter'",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/jbuck/wintersmith-nunjucks/issues"
+  },
+  "homepage": "https://github.com/jbuck/wintersmith-nunjucks#readme",
+  "_id": "wintersmith-nunjucks@0.5.1",
+  "_shasum": "307cca4c2048964a145511daced5d9af044eee70",
+  "_from": "git://github.com/travist/wintersmith-nunjucks.git#c3cc698e0911f9bfab966dfe12c059cf5afe040a",
+  "_resolved": "git://github.com/travist/wintersmith-nunjucks.git#c3cc698e0911f9bfab966dfe12c059cf5afe040a"
 }

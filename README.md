@@ -26,23 +26,10 @@ To use customer filters with wintersmith, put the filter in its own file stored 
 so if your filter is in './filters/myfirstfilter.js' add a  nunjucks section like this to your config.json:
 
 ```javascript
-"nunjucks": {
+"nunjucks": {  
     "filterdir": "filters",
     "filters": ["myfirstfilter"]
 }
 ```
 
 It will be available in your templates at 'myfirstfilter'
-
-
-Autoescaping
-------------
-
-As of nunjucks 2.0.0 autoescaping was turned on by default. As of v1.0 this plugin also defaults to autoescaping turned on. If you want to change behaviour for pre-v1.0 compatibility you can control it with the autoescape option in your config.json.
-
-```javascript
-"nunjucks": {
-    "autoescape": false
-}
-```
-
